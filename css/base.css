@@ -1,0 +1,83 @@
+/* === base.css === Myanmar Precision Systems */
+
+body {
+    font-family: var(--font-body);
+    font-weight: 500; /* Increased from default 400 */
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-dark);
+    overflow-x: hidden;
+    /* Technical Grid Background */
+    background-image: 
+        linear-gradient(rgba(61, 142, 232, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(61, 142, 232, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-attachment: fixed;
+}
+
+/* Typography Scale */
+h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+h1 { font-size: clamp(3rem, 10vw, 6rem); font-weight: 800; }
+h2 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; margin-bottom: 1.5rem; }
+h3 { font-size: 1.75rem; font-weight: 600; }
+
+p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.text-mono {
+    font-family: var(--font-mono);
+}
+
+.text-accent { color: var(--color-accent); }
+.text-blue-ui { color: var(--color-blue-ui); }
+.text-secondary { color: var(--color-text-secondary); }
+
+::selection {
+    background-color: var(--color-accent);
+    color: var(--color-bg-dark);
+}
+
+/* Scanline Overlay */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        var(--color-scan-line) 3px,
+        var(--color-scan-line) 4px
+    );
+    pointer-events: none;
+    z-index: 10000;
+    opacity: 0.8;
+}
+
+/* HUD Style Overlines */
+.hud-overline {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: var(--font-mono);
+    color: var(--color-accent);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 5px var(--color-accent-dim));
+}
+
+.hud-overline::before,
+.hud-overline::after {
+    content: "━━";
+}

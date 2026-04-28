@@ -1,0 +1,51 @@
+/* === animations.css === Myanmar Precision Systems */
+
+@keyframes gridPan {
+    0% { background-position: 0 0; }
+    100% { background-position: 50px 50px; }
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes scanPulse {
+    0% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger for grids */
+.stagger-container > *:nth-child(1) { transition-delay: 0.1s; }
+.stagger-container > *:nth-child(2) { transition-delay: 0.2s; }
+.stagger-container > *:nth-child(3) { transition-delay: 0.3s; }
+.stagger-container > *:nth-child(4) { transition-delay: 0.4s; }
+.stagger-container > *:nth-child(5) { transition-delay: 0.5s; }
+.stagger-container > *:nth-child(6) { transition-delay: 0.6s; }
+
+/* Pulse for scanlines */
+body::after {
+    animation: scanPulse 4s ease-in-out alternate infinite;
+}

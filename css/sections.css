@@ -1,0 +1,169 @@
+/* === sections.css === Myanmar Precision Systems */
+
+/* Process Steps */
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+    margin-top: 4rem;
+}
+
+.process-steps::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--color-border);
+    z-index: 0;
+}
+
+.process-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: #0A1322;
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 4px; /* Square HUD look */
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 0 15px var(--color-accent-dim);
+}
+
+.step-title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.step-desc {
+    font-size: 0.875rem;
+    color: var(--color-text-mid);
+}
+
+@media (max-width: 768px) {
+    .process-steps {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .process-steps::before {
+        left: 30px;
+        top: 0;
+        width: 1px;
+        height: 100%;
+    }
+    
+    .process-step {
+        display: flex;
+        gap: 2rem;
+        text-align: left;
+    }
+    
+    .step-number {
+        margin: 0;
+        flex-shrink: 0;
+    }
+}
+
+/* Equipment Grid Group */
+.equipment-category {
+    margin-bottom: 4rem;
+}
+
+/* Feature Points */
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.25rem;
+    background: rgba(75, 123, 161, 0.05);
+    border-left: 3px solid var(--color-accent);
+}
+
+.feature-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--color-accent);
+}
+
+/* Testimonials */
+.testimonial-card {
+    background: var(--color-bg-panel);
+    padding: 3rem;
+    border: 1px solid var(--color-border);
+}
+
+.quote-mark {
+    font-size: 4rem;
+    color: var(--color-accent);
+    line-height: normal;
+    display: block;
+    margin-bottom: -1rem;
+    opacity: 0.5;
+}
+
+.testimonial-text {
+    font-style: italic;
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+}
+
+.testimonial-author {
+    font-family: var(--font-display);
+    font-weight: 600;
+}
+
+/* Contact Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.map-placeholder {
+    height: 400px;
+    background: #050A14;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-border-accent);
+}
+
+.map-placeholder::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(circle at 50% 50%, rgba(61, 142, 232, 0.1) 0%, transparent 80%),
+        linear-gradient(rgba(61, 142, 232, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(61, 142, 232, 0.05) 1px, transparent 1px);
+    background-size: 100% 100%, 20px 20px, 20px 20px;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
