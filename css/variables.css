@@ -1,0 +1,35 @@
+/* === variables.css === Myanmar Precision Systems */
+
+:root {
+    /* Color Tokens based on HUD Banner */
+    --color-bg-dark:        #050A14;   /* Deepest Navy for background */
+    --color-bg-panel:       rgba(10, 19, 34, 0.8); /* Glassy panel */
+    --color-bg-panel-hover: rgba(14, 27, 47, 0.9);
+    
+    --color-accent:         #449DFB;   /* Brighter Electric Blue */
+    --color-accent-hover:   #66B1FF;
+    --color-accent-dim:     rgba(68, 157, 251, 0.4);
+    --color-blue-ui:        #66B1FF;   /* Added missing blue ui color */
+    
+    --color-gold:           #FFB400;   /* Vibrant Gold */
+    --color-gold-dim:       rgba(255, 180, 0, 0.3);
+    
+    --color-text-primary:   #FFFFFF;
+    --color-text-secondary: #E1E8F0;   /* Brightened from #D1DAE8 */
+    --color-text-on-light:  #0C1829;
+    --color-text-mid:       #B8C4D1;   /* Brightened from #9BA9B8 */
+
+    --color-border:         rgba(61, 142, 232, 0.2);
+    --color-border-accent:  rgba(61, 142, 232, 0.5);
+    --color-border-gold:    rgba(244, 161, 6, 0.4);
+
+    /* Typography */
+    --font-display:  'Barlow Condensed', sans-serif;
+    --font-ui:       'Barlow', sans-serif;
+    --font-body:     'DM Sans', sans-serif;
+    --font-mono:     'JetBrains Mono', monospace;
+
+    /* Spacing */
+    --section-padding: 6rem 1rem;
+    --container-max-width: 1300px;
+}

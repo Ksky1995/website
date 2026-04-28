@@ -1,0 +1,245 @@
+/* === components.css === Myanmar Precision Systems */
+
+/* Glow Effects (Instrument Shine) */
+.glow-accent {
+    filter: drop-shadow(0 0 8px var(--color-accent-dim));
+}
+
+.glow-text {
+    text-shadow: 0 0 15px var(--color-accent-dim);
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: 0.937rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -150%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0) 70%
+    );
+    transition: all 0.6s ease;
+    pointer-events: none;
+}
+
+.btn:hover::after {
+    left: 150%;
+}
+
+.btn--primary {
+    background-color: var(--color-accent);
+    color: var(--color-text-primary);
+    box-shadow: 0 0 20px var(--color-accent-dim);
+}
+
+.btn--primary:hover {
+    background-color: var(--color-accent-hover);
+    box-shadow: 0 0 30px var(--color-accent-dim);
+    transform: translateY(-2px);
+}
+
+.btn--outline {
+    background: transparent;
+    border: 1px solid var(--color-text-primary);
+    color: var(--color-text-primary);
+}
+
+.btn--outline:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    box-shadow: 0 0 15px var(--color-accent-dim);
+}
+
+/* Removal of obsolete logo-text specific style */
+
+/* Cards */
+.card {
+    background: var(--color-bg-panel);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--color-border);
+    padding: 2.5rem;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -150%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(255, 255, 255, 0.05) 50%,
+        rgba(255, 255, 255, 0) 70%
+    );
+    transition: all 0.8s ease;
+    pointer-events: none;
+}
+
+.card:hover::after {
+    left: 150%;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(61, 142, 232, 0.05), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:hover {
+    background: var(--color-bg-panel-hover);
+    border-color: var(--color-border-accent);
+    box-shadow: 0 0 40px var(--color-accent-dim);
+    transform: translateY(-8px);
+}
+
+/* Service Card Icons */
+.card__icon {
+    width: 48px;
+    height: 48px;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 0 5px var(--color-accent-dim));
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--color-accent); /* Blue labels for HUD look */
+    margin-bottom: 0.5rem;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.form-input {
+    width: 100%;
+    background: rgba(10, 19, 34, 0.4);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--color-border);
+    padding: 0.875rem;
+    border-radius: 4px;
+    color: var(--color-text-primary);
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 10px var(--color-accent-dim);
+    background: rgba(10, 19, 34, 0.6);
+}
+
+.form-input option {
+    background: #0A1322;
+    color: #FFF;
+}
+
+/* Image Slots */
+.img-slot {
+    background: var(--color-bg-panel);
+    border: 1px dashed var(--color-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-slot::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    border-top: 1px solid var(--color-accent);
+    border-right: 1px solid var(--color-accent);
+}
+
+.img-slot__icon {
+    width: 64px;
+    height: 64px;
+    color: rgba(75, 123, 161, 0.2);
+    margin-bottom: 1.5rem;
+}
+
+.img-slot__label {
+    font-family: var(--font-mono);
+    color: var(--color-accent);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Badge / Filter Tabs */
+.filter-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.tab-btn {
+    padding: 0.625rem 1.5rem;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    font-family: var(--font-ui);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.is-active,
+.tab-btn:hover {
+    background: var(--color-accent);
+    color: var(--color-text-primary);
+    border-color: var(--color-accent);
+}

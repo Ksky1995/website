@@ -1,0 +1,101 @@
+/* === layout.css === Myanmar Precision Systems */
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    padding: var(--section-padding);
+    position: relative;
+}
+
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 1024px) {
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .grid-2, .grid-3, .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    section {
+        padding: 4rem 1rem;
+    }
+}
+
+/* Blueprint Grid Background */
+.blueprint-bg {
+    position: relative;
+    background-color: var(--color-bg-dark);
+}
+
+.blueprint-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(var(--color-blue-dim) 1px, transparent 1px),
+        linear-gradient(90deg, var(--color-blue-dim) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.blueprint-bg.animate-grid::before {
+    animation: gridPan 60s linear infinite;
+}
+
+/* Alt Section (Dark Theme) */
+.section-light {
+    background-color: #08101C;
+    color: var(--color-text-primary);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.section-light h2 {
+    color: #FFFFFF;
+}
+
+.section-light .hud-overline {
+    color: var(--color-gold);
+}
+
+.section-light .text-mid {
+    color: var(--color-text-secondary);
+}
+
+/* Section Divider */
+.section-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    opacity: 0.3;
+}
+
+.section-divider::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: var(--color-bg-dark);
+    border: 1px solid var(--color-accent);
+    transform: rotate(45deg);
+    box-shadow: 0 0 10px var(--color-accent-dim);
+}

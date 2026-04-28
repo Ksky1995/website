@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myanmar Precision Systems | specialist instrument service center</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@500;600&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="blueprint-bg animate-grid">
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="nav">
+        <div class="container nav__container">
+            <a href="#hero" class="logo" aria-label="Myanmar Precision Systems">
+                <div class="logo__mark-container">
+                    <svg class="logo__mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <!-- Outer Frame (Navy) -->
+                        <polygon points="50,0 100,50 50,100 0,50" fill="#1B3044"/>
+                        <!-- Inner White Area -->
+                        <polygon points="50,9 91,50 50,91 9,50" fill="#FFFFFF"/>
+                        <!-- Top Accent (Slate Blue) -->
+                        <polygon points="50,22 64,36 50,50 36,36" fill="#547A96"/>
+                        <!-- Left Wing (Navy) -->
+                        <polygon points="30,44 44,58 44,84 16,56" fill="#1B3044"/>
+                        <!-- Right Wing (Navy) -->
+                        <polygon points="70,44 56,58 56,84 84,56" fill="#1B3044"/>
+                        <!-- Bottom Stem (Navy) -->
+                        <rect x="47" y="62" width="6" height="24" fill="#1B3044"/>
+                    </svg>
+                    <div class="logo__shine"></div>
+                </div>
+                <div class="logo__wordmark">
+                    <span>MYANMAR</span>
+                    <span>PRECISION</span>
+                    <span>SYSTEMS</span>
+                </div>
+            </a>
+            
+            <ul class="nav__links">
+                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#services" class="nav__link">Services</a></li>
+                <li><a href="#equipment" class="nav__link">Equipment</a></li>
+                <li><a href="#process" class="nav__link">Process</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+
+            <div class="nav__right">
+                <span class="nav__phone">🇲🇲 +95 9 123 456 789</span>
+                <a href="#contact" class="btn btn--primary">Request Service</a>
+            </div>
+
+            <button class="nav__toggle" aria-label="Toggle Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-menu__links">
+            <li><a href="#about" class="mobile-menu__link">About</a></li>
+            <li><a href="#services" class="mobile-menu__link">Services</a></li>
+            <li><a href="#equipment" class="mobile-menu__link">Equipment</a></li>
+            <li><a href="#process" class="mobile-menu__link">Process</a></li>
+            <li><a href="#contact" class="mobile-menu__link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <main id="hero" class="hero">
+        <!-- Radar HUD Element -->
+        <div class="hud-radar">
+            <svg viewBox="0 0 200 200" class="radar-svg glow-accent">
+                <!-- Main Grid -->
+                <circle cx="100" cy="100" r="80" fill="none" stroke="var(--color-accent)" stroke-width="0.5" stroke-dasharray="2 4" />
+                <circle cx="100" cy="100" r="60" fill="none" stroke="var(--color-accent)" stroke-width="0.5" />
+                <circle cx="100" cy="100" r="40" fill="none" stroke="var(--color-accent)" stroke-width="0.5" />
+                <line x1="20" y1="100" x2="180" y2="100" stroke="var(--color-accent)" stroke-width="0.5" />
+                <line x1="100" y1="20" x2="100" y2="180" stroke="var(--color-accent)" stroke-width="0.5" />
+                
+                <!-- Indicators -->
+                <rect x="98" y="10" width="4" height="15" fill="var(--color-accent)" class="glow-accent" />
+                <rect x="98" y="175" width="4" height="15" fill="var(--color-accent)" class="glow-accent" />
+                <rect x="10" y="98" width="15" height="4" fill="var(--color-accent)" class="glow-accent" />
+                <rect x="175" y="98" width="15" height="4" fill="var(--color-accent)" class="glow-accent" />
+
+                <!-- Sweep -->
+                <line x1="100" y1="100" x2="160" y2="60" stroke="var(--color-accent)" stroke-width="2" class="radar-sweep" />
+                <circle cx="100" cy="100" r="4" fill="var(--color-accent)" class="glow-accent" />
+            </svg>
+        </div>
+
+        <!-- Instrument Silhouette -->
+        <div class="hero-instrument">
+            <svg viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <line x1="50" y1="50" x2="20" y2="140" stroke="var(--color-accent)" stroke-width="1.5" />
+                <line x1="50" y1="50" x2="80" y2="140" stroke="var(--color-accent)" stroke-width="1.5" />
+                <line x1="50" y1="50" x2="50" y2="140" stroke="var(--color-accent)" stroke-width="1" />
+                <rect x="30" y="20" width="40" height="30" fill="var(--color-bg-dark)" stroke="var(--color-accent)" stroke-width="1.5" />
+                <circle cx="50" cy="35" r="8" fill="var(--color-accent)" opacity="0.3" />
+            </svg>
+        </div>
+
+        <div class="container hero__content">
+            <div class="hero__text">
+                <div class="hud-overline">ISO CERTIFIED CALIBRATION & REPAIR SPECIALISTS</div>
+                <h1 class="hero__title">
+                    <span class="title-primary">MYANMAR</span>
+                    <span class="title-accent glow-text shine-effect">PRECISION</span>
+                    <span class="title-secondary">SYSTEMS</span>
+                    <div class="title-underline"></div>
+                </h1>
+                
+                <p class="hero__description" style="margin-bottom: 1rem;">
+                    Expert repair & calibration for survey, soil testing, and concrete testing instruments. 
+                    ISO-traceable. Fast turnaround. Certified laboratory.
+                </p>
+                <p class="text-mono text-blue-ui" style="font-size: 0.75rem; margin-bottom: 2.5rem; letter-spacing: 0.1em;">
+                    Precision Instruments | Calibration | Repair & Service
+                </p>
+
+                <div class="hero__tags">
+                    <span class="tag-pill">SURVEY</span>
+                    <span class="tag-pill">SOIL TESTING</span>
+                    <span class="tag-pill">CONCRETE</span>
+                    <span class="tag-pill">CALIBRATION</span>
+                    <span class="tag-pill">REPAIR</span>
+                </div>
+
+                <div class="hero__ctas">
+                    <a href="#contact" class="btn btn--primary">Request Repair Service</a>
+                    <a href="#services" class="btn btn--outline">View Our Services <i data-lucide="arrow-right"></i></a>
+                </div>
+
+                <div class="hero__stats">
+                    <div class="stat-item">
+                        <span class="stat-value" data-target="7" data-suffix=" DAYS">0</span>
+                        <span class="stat-label">Avg. Repair Turnaround</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">ISO</span>
+                        <span class="stat-label">Calibration Standard</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" data-target="500" data-suffix="+">0</span>
+                        <span class="stat-label">Instruments Serviced</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero__image-wrapper animate-on-scroll">
+                <!-- ============================================================
+                     IMAGE SLOT: hero-main
+                     Recommended: 900×700px, JPG/WebP
+                     Content: Technician working on survey instrument / calibration bench
+                     ============================================================ -->
+                <div class="img-slot" data-label="Service Center Operations" aria-label="Technician working on survey instrument">
+                    <div class="img-slot__icon"><i data-lucide="settings"></i></div>
+                    <span class="img-slot__label">Main Laboratory Workspace</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Ticker Strip -->
+    <div class="ticker">
+        <div class="ticker__track">
+            <span class="ticker__item">✦ Survey Instrument Repair</span>
+            <span class="ticker__item">✦ Total Station Calibration</span>
+            <span class="ticker__item">✦ GPS/GNSS Service</span>
+            <span class="ticker__item">✦ Soil Testing Equipment Overhaul</span>
+            <span class="ticker__item">✦ Compression Machine Repair</span>
+            <span class="ticker__item">✦ CBR Apparatus Servicing</span>
+            <span class="ticker__item">✦ Triaxial Test Set Calibration</span>
+            <span class="ticker__item">✦ Rebar Locator Repair</span>
+            <span class="ticker__item">✦ ISO-Traceable Certification</span>
+            <span class="ticker__item">✦ Loaner Equipment Available</span>
+            <!-- Duplicate for infinite scroll -->
+            <span class="ticker__item">✦ Survey Instrument Repair</span>
+            <span class="ticker__item">✦ Total Station Calibration</span>
+            <span class="ticker__item">✦ GPS/GNSS Service</span>
+            <span class="ticker__item">✦ Soil Testing Equipment Overhaul</span>
+        </div>
+    </div>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="section-light">
+        <div class="container grid grid-2">
+            <div class="animate-on-scroll">
+                <div class="hud-overline">WHO WE ARE</div>
+                <h2>Myanmar's Specialist Precision Instrument Service Center</h2>
+                <p class="text-mid" style="margin-bottom: 2rem;">
+                    Myanmar Precision Systems is Yangon's dedicated service center for high-precision measurement instruments. 
+                    Our certified technicians handle everything from field survey equipment to geotechnical testing apparatus — 
+                    providing expert repair, ISO-traceable calibration, and preventive maintenance that keeps your instruments 
+                    accurate and your projects on schedule.
+                </p>
+                <p class="text-mid" style="font-style: italic; margin-bottom: 2.5rem;">
+                    Products are available on request — contact us for sourcing, rental arrangements, or equipment recommendations.
+                </p>
+                <div class="hero__tags">
+                    <span class="tag-pill">Certified Technicians</span>
+                    <span class="tag-pill">ISO Calibration</span>
+                    <span class="tag-pill">Genuine OEM Parts</span>
+                    <span class="tag-pill">Fast Turnaround</span>
+                </div>
+            </div>
+
+            <div class="grid grid-2 stagger-container animate-on-scroll">
+                <div class="img-slot" style="min-height: 200px;" data-label="Workshop">
+                    <i data-lucide="hammer"></i>
+                </div>
+                <div class="img-slot" style="min-height: 200px;" data-label="Calibration">
+                    <i data-lucide="target"></i>
+                </div>
+                <div class="img-slot" style="min-height: 200px;" data-label="Team">
+                    <i data-lucide="users"></i>
+                </div>
+                <div class="img-slot" style="min-height: 200px;" data-label="Certificate">
+                    <i data-lucide="file-check"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section id="services" class="blueprint-bg">
+        <div class="container">
+            <div class="text-center animate-on-scroll" style="text-align: center; margin-bottom: 4rem;">
+                <div class="hud-overline" style="justify-content: center;">OUR SERVICES</div>
+                <h2>Complete Instrument Service Solutions</h2>
+                <p class="text-secondary">From field damage to workshop overhaul — we restore accuracy.</p>
+            </div>
+
+            <div class="grid grid-3 stagger-container animate-on-scroll">
+                <!-- CARD 1 -->
+                <div class="card">
+                    <div class="card__icon"><i data-lucide="wrench"></i></div>
+                    <h3>Repair & Overhaul</h3>
+                    <p class="text-secondary" style="font-size: 0.937rem; margin-top: 1rem;">
+                        Full disassembly, cleaning, component replacement, and reassembly. 
+                        Covers mechanical, electronic, and optical faults.
+                    </p>
+                    <div class="img-slot" style="min-height: 150px; margin-top: 1.5rem;" data-label="Repair Lab"></div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="card">
+                    <div class="card__icon"><i data-lucide="target"></i></div>
+                    <h3>Calibration & Certification</h3>
+                    <p class="text-secondary" style="font-size: 0.937rem; margin-top: 1rem;">
+                        ISO-traceable calibration with official certificate. 
+                        Accepted for project compliance and tender requirements.
+                    </p>
+                    <div class="img-slot" style="min-height: 150px; margin-top: 1.5rem;" data-label="Calibration Ben"></div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="card">
+                    <div class="card__icon"><i data-lucide="shield-check"></i></div>
+                    <h3>Preventive Maintenance</h3>
+                    <p class="text-secondary" style="font-size: 0.937rem; margin-top: 1rem;">
+                        Scheduled servicing to detect wear, clean optics, and firmware check 
+                        before failures occur in the field.
+                    </p>
+                    <div class="img-slot" style="min-height: 150px; margin-top: 1.5rem;" data-label="Maintenance"></div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="card">
+                    <div class="card__icon"><i data-lucide="map-pin"></i></div>
+                    <h3>On-site Technical Support</h3>
+                    <p class="text-secondary" style="font-size: 0.937rem; margin-top: 1rem;">
+                        Certified technicians dispatched to your project site for calibration 
+                        and emergency repairs across Myanmar.
+                    </p>
+                    <div class="img-slot" style="min-height: 150px; margin-top: 1.5rem;" data-label="Field Support"></div>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="card">
+                    <div class="card__icon"><i data-lucide="package"></i></div>
+                    <h3>Spare Parts Supply</h3>
+                    <p class="text-secondary" style="font-size: 0.937rem; margin-top: 1rem;">
+                        Genuine OEM and compatible spare parts sourced from authorized distributors.
+                    </p>
+                    <div class="img-slot" style="min-height: 150px; margin-top: 1.5rem;" data-label="OEM Parts"></div>
+                </div>
+
+                <!-- CARD 6 -->
+                <div class="card">
+                    <div class="card__icon"><i data-lucide="monitor"></i></div>
+                    <h3>Training & Demo</h3>
+                    <p class="text-secondary" style="font-size: 0.937rem; margin-top: 1rem;">
+                        Hands-on operator training for instrument use and maintenance basics.
+                    </p>
+                    <div class="img-slot" style="min-height: 150px; margin-top: 1.5rem;" data-label="Training Unit"></div>
+                </div>
+            </div>
+
+            <div class="animate-on-scroll" style="margin-top: 4rem; padding: 2rem; border: 1px solid var(--color-accent); background: rgba(75, 123, 161, 0.05); text-align: center;">
+                <p class="text-mono text-accent" style="font-size: 0.875rem;">
+                    ⚡ 3–7 Business Day Turnaround  ·  Service Report with Every Job  ·  Loaner Equipment Available  ·  All Work Guaranteed
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EQUIPMENT SECTION ==================== -->
+    <section id="equipment" class="blueprint-bg">
+        <div class="container">
+            <div class="animate-on-scroll" style="margin-bottom: 4rem;">
+                <div class="hud-overline">EQUIPMENT WE SERVICE</div>
+                <h2>Instruments We Repair & Calibrate</h2>
+                <p class="text-secondary">We service all major brands. Equipment sales and rentals available on request.</p>
+            </div>
+
+            <div class="filter-tabs animate-on-scroll">
+                <button class="tab-btn is-active" data-filter="all">All</button>
+                <button class="tab-btn" data-filter="survey">Survey</button>
+                <button class="tab-btn" data-filter="soil">Soil Testing</button>
+                <button class="tab-btn" data-filter="concrete">Concrete Testing</button>
+            </div>
+
+            <div class="grid grid-3 stagger-container animate-on-scroll" id="equipment-grid">
+                <!-- SURVEY -->
+                <div class="card equipment-card" data-category="survey">
+                    <div class="card__icon"><i data-lucide="compass"></i></div>
+                    <h3>Total Stations</h3>
+                    <p class="text-secondary">All brands, 1"–5" accuracy class</p>
+                    <span class="tag-pill" style="margin-top: 1rem;">Survey</span>
+                </div>
+                <div class="card equipment-card" data-category="survey">
+                    <div class="card__icon"><i data-lucide="radio"></i></div>
+                    <h3>GPS / GNSS RTK</h3>
+                    <p class="text-secondary">Receivers & Data Collectors</p>
+                    <span class="tag-pill" style="margin-top: 1rem;">Survey</span>
+                </div>
+                
+                <!-- SOIL -->
+                <div class="card equipment-card" data-category="soil">
+                    <div class="card__icon"><i data-lucide="layers"></i></div>
+                    <h3>CBR Test Sets</h3>
+                    <p class="text-secondary">California Bearing Ratio systems</p>
+                    <span class="tag-pill" style="margin-top: 1rem;">Soil Testing</span>
+                </div>
+                <div class="card equipment-card" data-category="soil">
+                    <div class="card__icon"><i data-lucide="thermometer"></i></div>
+                    <h3>Moisture Probes</h3>
+                    <p class="text-secondary">Digital testing equipment</p>
+                    <span class="tag-pill" style="margin-top: 1rem;">Soil Testing</span>
+                </div>
+
+                <!-- CONCRETE -->
+                <div class="card equipment-card" data-category="concrete">
+                    <div class="card__icon"><i data-lucide="hammer"></i></div>
+                    <h3>Schmidt Hammers</h3>
+                    <p class="text-secondary">Rebound & digital models</p>
+                    <span class="tag-pill" style="margin-top: 1rem;">Concrete</span>
+                </div>
+                <div class="card equipment-card" data-category="concrete">
+                    <div class="card__icon"><i data-lucide="scan"></i></div>
+                    <h3>Rebar Locators</h3>
+                    <p class="text-secondary">Cover meters & scanners</p>
+                    <span class="tag-pill" style="margin-top: 1rem;">Concrete</span>
+                </div>
+            </div>
+
+            <p class="text-secondary" style="margin-top: 3rem; font-style: italic; text-align: center;">
+                Don't see your instrument? Contact us — if we can't service it, we'll refer you to someone who can.
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== PROCESS SECTION ==================== -->
+    <section id="process" class="section-light">
+        <div class="container">
+            <div class="text-center animate-on-scroll" style="text-align: center; margin-bottom: 4rem;">
+                <div class="hud-overline" style="justify-content: center;">HOW IT WORKS</div>
+                <h2>Simple. Transparent. Reliable.</h2>
+            </div>
+
+            <div class="process-steps animate-on-scroll">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">DROP-OFF</h3>
+                    <p class="step-desc">Bring to workshop or arrange collection</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">DIAGNOSIS</h3>
+                    <p class="step-desc">Full inspection & written quote</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">REPAIR</h3>
+                    <p class="step-desc">Certified technician service</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3 class="step-title">QUALITY</h3>
+                    <p class="step-desc">Accuracy & functional check</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">05</div>
+                    <h3 class="step-title">HANDOVER</h3>
+                    <p class="step-desc">ISO Certificate & return</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CHOICE SECTION ==================== -->
+    <section class="blueprint-bg">
+        <div class="container grid grid-2 items-center">
+            <div class="animate-on-scroll">
+                <h2>Why Engineers Trust Us</h2>
+                <p class="text-secondary" style="margin-bottom: 2.5rem;">
+                    We understand that downtime costs money. Our Yangon service center is equipped with the latest diagnostic tools 
+                    to ensure your equipment returns to the field in peak condition.
+                </p>
+                <div class="hero__stats">
+                    <div class="stat-item">
+                        <span class="stat-value" data-target="50" data-suffix="+">0</span>
+                        <span class="stat-label">Brands Supported</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" data-target="100" data-suffix="%">0</span>
+                        <span class="stat-label">Traceable Calibration</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-list animate-on-scroll">
+                <div class="feature-item">
+                    <div class="feature-icon"><i data-lucide="zap"></i></div>
+                    <span class="text-mono">3–7 Day Turnaround on Most Repairs</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i data-lucide="award"></i></div>
+                    <span class="text-mono">Certified Technicians — OEM-Trained</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i data-lucide="file-text"></i></div>
+                    <span class="text-mono">Written Quote Before Any Work Begins</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i data-lucide="refresh-cw"></i></div>
+                    <span class="text-mono">Loaner Equipment During Repair</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="section-light">
+        <div class="container contact-grid">
+            <div class="animate-on-scroll">
+                <div class="hud-overline">CONTACT & SERVICE REQUEST</div>
+                <h3>Request a Repair or Calibration</h3>
+                
+                <form id="contact-form" class="animate-on-scroll" style="margin-top: 2rem;">
+                    <div class="form-group">
+                        <label class="form-label">Full Name *</label>
+                        <input type="text" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Company / Organization</label>
+                        <input type="text" class="form-input">
+                    </div>
+                    <div class="grid grid-2">
+                        <div class="form-group">
+                            <label class="form-label">Phone Number *</label>
+                            <input type="tel" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email Address *</label>
+                            <input type="email" class="form-input" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Service Type</label>
+                        <select class="form-input">
+                            <option>Repair & Overhaul</option>
+                            <option>Calibration & Certification</option>
+                            <option>Preventive Maintenance</option>
+                            <option>On-site Support</option>
+                            <option>Spare Parts Enquiry</option>
+                            <option>Equipment Purchase/Rental</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Instrument Type (e.g. Leica TS06)</label>
+                        <input type="text" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Message / Details</label>
+                        <textarea class="form-input" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary" style="width: 100%;">Send Request</button>
+                </form>
+
+                <div id="form-success" style="display: none; padding: 2rem; border: 1px solid var(--color-accent); background: rgba(75, 123, 161, 0.05); margin-top: 2rem;">
+                    <p class="text-accent" style="font-weight: 600;">✓ Request received! We'll contact you within 24 hours.</p>
+                </div>
+            </div>
+
+            <div class="animate-on-scroll">
+                <h3>Our Location</h3>
+                <p class="text-mid" style="margin: 1rem 0 2rem;">No. 45, Pyay Road, Hlaing Township, Yangon, Myanmar</p>
+                
+                <div class="map-placeholder">
+                    <div class="blueprint-bg" style="width: 100%; height: 100%; opacity: 0.3;"></div>
+                    <div style="position: absolute; text-align: center;">
+                        <div class="text-accent"><i data-lucide="map-pin" style="width: 48px; height: 48px;"></i></div>
+                        <div class="text-mono" style="margin-top: 1rem;">HLAING TOWNSHIP, YANGON</div>
+                    </div>
+                </div>
+
+                <div class="grid grid-2" style="margin-top: 2rem;">
+                    <div>
+                        <h4 class="text-mono" style="font-size: 0.875rem; margin-bottom: 0.5rem;">HOURS</h4>
+                        <p class="text-mid" style="font-size: 0.875rem;">
+                            Mon–Fri: 9:00 AM – 5:30 PM<br>
+                            Saturday: 9:00 AM – 1:00 PM<br>
+                            Sunday: Closed
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-mono" style="font-size: 0.875rem; margin-bottom: 0.5rem;">CONTACT</h4>
+                        <p class="text-mid" style="font-size: 0.875rem;">
+                            +95 9 123 456 789<br>
+                            info@myanmarprecision.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="footer__logo-group">
+                <a href="#hero" class="logo" aria-label="Myanmar Precision Systems">
+                    <div class="logo__mark-container">
+                        <svg class="logo__mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <polygon points="50,0 100,50 50,100 0,50" fill="#1B3044"/>
+                            <polygon points="50,9 91,50 50,91 9,50" fill="#FFFFFF"/>
+                            <polygon points="50,22 64,36 50,50 36,36" fill="#547A96"/>
+                            <polygon points="30,44 44,58 44,84 16,56" fill="#1B3044"/>
+                            <polygon points="70,44 56,58 56,84 84,56" fill="#1B3044"/>
+                            <rect x="47" y="62" width="6" height="24" fill="#1B3044"/>
+                        </svg>
+                        <div class="logo__shine"></div>
+                    </div>
+                    <div class="logo__wordmark">
+                        <span>MYANMAR</span>
+                        <span>PRECISION</span>
+                        <span>SYSTEMS</span>
+                    </div>
+                </a>
+                <p class="footer__tagline">Precision You Can Trust. Service You Can Rely On. Myanmar's specialist since 2015.</p>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <a href="#" class="text-secondary"><i data-lucide="linkedin"></i></a>
+                    <a href="#" class="text-secondary"><i data-lucide="facebook"></i></a>
+                    <a href="#" class="text-secondary"><i data-lucide="youtube"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer__title">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Repair & Overhaul</a></li>
+                    <li><a href="#" class="footer__link">Calibration</a></li>
+                    <li><a href="#" class="footer__link">Maintenance</a></li>
+                    <li><a href="#" class="footer__link">On-site Support</a></li>
+                    <li><a href="#" class="footer__link">Spare Parts</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer__title">Equipment</h4>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Survey Instruments</a></li>
+                    <li><a href="#" class="footer__link">Soil Testing</a></li>
+                    <li><a href="#" class="footer__link">Concrete Testing</a></li>
+                    <li><a href="#" class="footer__link">All Brands</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer__title">Support</h4>
+                <ul class="footer__links">
+                    <li><a href="#contact" class="footer__link">Request Service</a></li>
+                    <li><a href="#" class="footer__link">Technical Docs</a></li>
+                    <li><a href="#" class="footer__link">Service Tracking</a></li>
+                    <li><a href="#" class="footer__link">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer__bottom">
+            <div>
+                <p class="text-mono" style="color: var(--color-accent); font-size: 0.7rem; margin-bottom: 0.5rem;">ISO CERTIFIED CALIBRATION & REPAIR SPECIALISTS</p>
+                <p>© 2025 Myanmar Precision Systems. All rights reserved.</p>
+            </div>
+            <div>
+                <p class="text-mono" style="color: var(--color-blue-ui); font-size: 0.7rem; margin-bottom: 0.5rem;">YANGON, MYANMAR · SINCE 2020</p>
+                <p>🇲🇲 Proudly serving Myanmar's engineering sector</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide
+        lucide.createIcons();
+    </script>
+    <script src="js/nav.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>
